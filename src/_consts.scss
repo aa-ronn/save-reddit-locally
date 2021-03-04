@@ -65,10 +65,6 @@ $height-content: calc(100vh - 7rem - 1px);
     }
   }
 
-  button:not(:nth-child(1)) {
-    margin-left: 0.5rem;
-  }
-
   @media (max-width: 525px) {
     button {
       width: fit-content;

@@ -4,7 +4,7 @@
   @include normal-font;
   height: $height-content;
   margin-right: 1rem;
-  padding: 1rem;
+  padding: 1rem 0 1rem 1rem;
   border-left: none;
   @include default-button;
   @include scrollable-box;
@@ -13,6 +13,10 @@
     margin-top: 1rem;
     display: flex;
     justify-content: center;
+
+    @media (max-width: 525px) {
+      font-size: 0.8rem;
+    }
   }
 
   .sort-options {
@@ -27,6 +31,10 @@
 
     .title {
       @include large-font;
+    }
+
+    button:not(:nth-child(1)) {
+      margin-left: 0.5rem;
     }
 
     .tiny-title {
@@ -52,6 +60,7 @@
       }
     }
   }
+  @include post-grid;
 
   @media (max-width: 575px) {
     .sort-options {
@@ -69,16 +78,16 @@
         visibility: hidden;
       }
 
-      button {
-        width: fit-content;
-      }
-
       .title {
         font-size: 0.7rem;
-        top: 0;
+        top: -1rem;
       }
     }
   }
 
-  @include post-grid;
+  @media (max-width: 320px) {
+    .sort-options {
+      justify-content: center;
+    }
+  }
 }

@@ -15,7 +15,14 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div>
+        <div
+          onClick={() =>
+            window.open(
+              "https://aa-ronn.github.io/save-reddit-locally/",
+              "_self"
+            )
+          }
+        >
           <FontAwesomeIcon icon={faSave} className="faicon" />{" "}
           <span>Reddit</span>
         </div>
