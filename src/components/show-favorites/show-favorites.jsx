@@ -97,17 +97,17 @@ export const ShowFavorites = ({ update }) => {
                       <button onClick={() => handleUnfavoritePost(item.name)}>
                         <FontAwesomeIcon icon={faTrashAlt} className="faicon" />
                       </button>
-                      <button>
-                        <a
-                          href={`https://www.reddit.com/r/${item.subreddit}/comments/${item.name}`}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <FontAwesomeIcon
-                            icon={faExternalLinkAlt}
-                            className="faicon"
-                          />
-                        </a>
+                      <button
+                        onClick={() =>
+                          window.open(
+                            `https://www.reddit.com/${item.permalink}', '_blank'`
+                          )
+                        }
+                      >
+                        <FontAwesomeIcon
+                          icon={faExternalLinkAlt}
+                          className="faicon"
+                        />
                       </button>
                     </div>
                     <div className="post-details">

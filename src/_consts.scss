@@ -36,7 +36,7 @@ $height-content: calc(100vh - 7rem - 1px);
     height: 2rem;
     width: 4rem;
 
-    > * {
+    .faicon {
       pointer-events: none;
     }
 

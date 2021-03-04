@@ -60,7 +60,7 @@ export const SearchAndDisplay = ({ notifyAddFavorite }) => {
     title,
     subreddit,
     author,
-    thumbnail
+    permalink
   ) => {
     localStorage.setItem(
       name,
@@ -70,7 +70,7 @@ export const SearchAndDisplay = ({ notifyAddFavorite }) => {
         score: score,
         subreddit: subreddit,
         author: author,
-        thumbnail: thumbnail,
+        permalink: permalink,
       })
     );
     notifyAddFavorite();
@@ -144,23 +144,23 @@ export const SearchAndDisplay = ({ notifyAddFavorite }) => {
                             item.data.title,
                             item.data.subreddit,
                             item.data.author,
-                            item.data.thumbnail
+                            item.data.permalink
                           )
                         }
                       >
                         <FontAwesomeIcon icon={faSave} className="faicon" />
                       </button>
-                      <button>
-                        <a
-                          href={`https://www.reddit.com/r/${item.data.subreddit}/comments/${item.data.name}`}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <FontAwesomeIcon
-                            icon={faExternalLinkAlt}
-                            className="faicon"
-                          />
-                        </a>
+                      <button
+                        onClick={() =>
+                          window.open(
+                            `https://www.reddit.com/${item.data.permalink}', '_blank'`
+                          )
+                        }
+                      >
+                        <FontAwesomeIcon
+                          icon={faExternalLinkAlt}
+                          className="faicon"
+                        />
                       </button>
                     </div>
                     <div className="post-details">
