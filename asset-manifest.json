@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/save-reddit-locally/static/css/main.b8cfeb07.chunk.css",
-    "main.js": "/save-reddit-locally/static/js/main.443b1e19.chunk.js",
-    "main.js.map": "/save-reddit-locally/static/js/main.443b1e19.chunk.js.map",
+    "main.css": "/save-reddit-locally/static/css/main.aa839220.chunk.css",
+    "main.js": "/save-reddit-locally/static/js/main.2bc0ddcb.chunk.js",
+    "main.js.map": "/save-reddit-locally/static/js/main.2bc0ddcb.chunk.js.map",
     "runtime-main.js": "/save-reddit-locally/static/js/runtime-main.067e16f5.js",
     "runtime-main.js.map": "/save-reddit-locally/static/js/runtime-main.067e16f5.js.map",
     "static/js/2.6efe5c60.chunk.js": "/save-reddit-locally/static/js/2.6efe5c60.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.708e9fa1.chunk.js": "/save-reddit-locally/static/js/3.708e9fa1.chunk.js",
     "static/js/3.708e9fa1.chunk.js.map": "/save-reddit-locally/static/js/3.708e9fa1.chunk.js.map",
     "index.html": "/save-reddit-locally/index.html",
-    "static/css/main.b8cfeb07.chunk.css.map": "/save-reddit-locally/static/css/main.b8cfeb07.chunk.css.map",
+    "static/css/main.aa839220.chunk.css.map": "/save-reddit-locally/static/css/main.aa839220.chunk.css.map",
     "static/js/2.6efe5c60.chunk.js.LICENSE.txt": "/save-reddit-locally/static/js/2.6efe5c60.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.067e16f5.js",
     "static/js/2.6efe5c60.chunk.js",
-    "static/css/main.b8cfeb07.chunk.css",
-    "static/js/main.443b1e19.chunk.js"
+    "static/css/main.aa839220.chunk.css",
+    "static/js/main.2bc0ddcb.chunk.js"
   ]
 }
