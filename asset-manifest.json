@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/local-reddit-saver/static/css/main.353d7596.chunk.css",
-    "main.js": "/local-reddit-saver/static/js/main.95ed01af.chunk.js",
-    "main.js.map": "/local-reddit-saver/static/js/main.95ed01af.chunk.js.map",
-    "runtime-main.js": "/local-reddit-saver/static/js/runtime-main.95953328.js",
-    "runtime-main.js.map": "/local-reddit-saver/static/js/runtime-main.95953328.js.map",
-    "static/js/2.6efe5c60.chunk.js": "/local-reddit-saver/static/js/2.6efe5c60.chunk.js",
-    "static/js/2.6efe5c60.chunk.js.map": "/local-reddit-saver/static/js/2.6efe5c60.chunk.js.map",
-    "static/js/3.708e9fa1.chunk.js": "/local-reddit-saver/static/js/3.708e9fa1.chunk.js",
-    "static/js/3.708e9fa1.chunk.js.map": "/local-reddit-saver/static/js/3.708e9fa1.chunk.js.map",
-    "index.html": "/local-reddit-saver/index.html",
-    "static/css/main.353d7596.chunk.css.map": "/local-reddit-saver/static/css/main.353d7596.chunk.css.map",
-    "static/js/2.6efe5c60.chunk.js.LICENSE.txt": "/local-reddit-saver/static/js/2.6efe5c60.chunk.js.LICENSE.txt"
+    "main.css": "/save-reddit-locally/static/css/main.353d7596.chunk.css",
+    "main.js": "/save-reddit-locally/static/js/main.95ed01af.chunk.js",
+    "main.js.map": "/save-reddit-locally/static/js/main.95ed01af.chunk.js.map",
+    "runtime-main.js": "/save-reddit-locally/static/js/runtime-main.067e16f5.js",
+    "runtime-main.js.map": "/save-reddit-locally/static/js/runtime-main.067e16f5.js.map",
+    "static/js/2.6efe5c60.chunk.js": "/save-reddit-locally/static/js/2.6efe5c60.chunk.js",
+    "static/js/2.6efe5c60.chunk.js.map": "/save-reddit-locally/static/js/2.6efe5c60.chunk.js.map",
+    "static/js/3.708e9fa1.chunk.js": "/save-reddit-locally/static/js/3.708e9fa1.chunk.js",
+    "static/js/3.708e9fa1.chunk.js.map": "/save-reddit-locally/static/js/3.708e9fa1.chunk.js.map",
+    "index.html": "/save-reddit-locally/index.html",
+    "static/css/main.353d7596.chunk.css.map": "/save-reddit-locally/static/css/main.353d7596.chunk.css.map",
+    "static/js/2.6efe5c60.chunk.js.LICENSE.txt": "/save-reddit-locally/static/js/2.6efe5c60.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.95953328.js",
+    "static/js/runtime-main.067e16f5.js",
     "static/js/2.6efe5c60.chunk.js",
     "static/css/main.353d7596.chunk.css",
     "static/js/main.95ed01af.chunk.js"
