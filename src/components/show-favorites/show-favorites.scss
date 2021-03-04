@@ -40,27 +40,46 @@
       right: 13.5rem;
       top: 1.5rem;
     }
-  }
 
-  @media (max-width: 910px) {
-    .sort-options {
+    @media (max-width: 910px) {
       .title {
         font-size: 1rem;
       }
     }
+
+    @media (max-width: 810px) {
+      justify-content: flex-end;
+
+      .title {
+        position: absolute;
+        top: -2px;
+      }
+    }
   }
 
-  @media (max-width: 810px) {
+  @media (max-width: 575px) {
     .sort-options {
-      justify-content: flex-end;
-      width: 103%;
+      .tiny-title {
+        visibility: hidden;
+      }
+    }
+  }
+
+  @media (max-width: 525px) {
+    .sort-options {
+      justify-content: center;
 
       .tiny-title {
         visibility: hidden;
       }
 
+      button {
+        width: fit-content;
+      }
+
       .title {
-        display: none;
+        font-size: 0.7rem;
+        top: 0;
       }
     }
   }

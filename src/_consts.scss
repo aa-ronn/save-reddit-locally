@@ -36,6 +36,10 @@ $height-content: calc(100vh - 7rem - 1px);
     height: 2rem;
     width: 4rem;
 
+    > * {
+      pointer-events: none;
+    }
+
     &.selected {
       background-color: $alt-reddit-color;
 
@@ -63,6 +67,12 @@ $height-content: calc(100vh - 7rem - 1px);
 
   button:not(:nth-child(1)) {
     margin-left: 0.5rem;
+  }
+
+  @media (max-width: 525px) {
+    button {
+      width: fit-content;
+    }
   }
 }
 
@@ -125,6 +135,42 @@ $height-content: calc(100vh - 7rem - 1px);
             grid-row-end: 4;
             grid-column-start: 1;
             grid-column-end: 3;
+          }
+
+          @media (max-width: 525px) {
+            font-size: 0.8rem;
+            grid-template-columns: 1fr;
+            .post-subreddit {
+              grid-column-start: 1;
+              grid-column-end: 2;
+              grid-row-start: 1;
+              grid-row-end: 2;
+            }
+            .post-author {
+              grid-column-start: 1;
+              grid-column-end: 2;
+              grid-row-start: 3;
+              grid-row-end: 4;
+            }
+            .post-stars {
+              grid-column-start: 1;
+              grid-column-end: 2;
+              grid-row-start: 5;
+              grid-row-end: 6;
+              display: flex;
+              justify-content: flex-start;
+
+              .faicon {
+                color: $reddit-color;
+                margin-right: 0.5rem;
+              }
+            }
+            .post-title {
+              grid-column-start: 1;
+              grid-column-end: 2;
+              grid-row-start: 7;
+              grid-row-end: 8;
+            }
           }
         }
       }

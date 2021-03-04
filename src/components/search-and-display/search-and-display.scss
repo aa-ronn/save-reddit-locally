@@ -36,7 +36,8 @@
         height: 2rem;
         padding-left: 1rem;
         @include normal-font;
-        color: $alt-text-color;
+        background-color: white;
+        opacity: 1;
       }
 
       .radios-group {
@@ -56,6 +57,24 @@
           input[type="radio"] {
             height: 1rem;
           }
+        }
+      }
+
+      @media (max-width: 520px) {
+        .radios-group {
+          .radios {
+            width: 7rem;
+
+            label {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 370px) {
+        input {
+          padding-left: 2px;
         }
       }
 

@@ -23,11 +23,9 @@ export const SearchAndDisplay = ({ notifyAddFavorite }) => {
       )
       .then((res) => {
         const data = res.data.data.children;
-        console.log(data);
         setSearchReturnValue(data);
       })
       .catch((error) => {
-        console.log(error);
         alert("No subreddit found with that name. Try again.");
         setSubRedditInputValue("");
         inputRef.current.focus();
@@ -64,7 +62,6 @@ export const SearchAndDisplay = ({ notifyAddFavorite }) => {
     author,
     thumbnail
   ) => {
-    console.log("Title: " + title + "\nScore: " + score + "\nName: " + name);
     localStorage.setItem(
       name,
       JSON.stringify({
@@ -121,7 +118,7 @@ export const SearchAndDisplay = ({ notifyAddFavorite }) => {
             type="text"
             value={subRedditInputValue}
             onChange={handleChange}
-            placeholder="Search..."
+            placeholder="Search"
             autoFocus
             required
           />
