@@ -30,7 +30,6 @@ export const ShowFavorites = ({ update }) => {
   }, [update]);
 
   const handleUnfavoritePost = (name) => {
-    console.log("Removing " + name + " from favorites.");
     localStorage.removeItem(name);
     localStorageToArray();
   };
