@@ -1,0 +1,69 @@
+@use "../../consts" as *;
+
+.show-favorites {
+  @include normal-font;
+  height: $height-content;
+  margin-right: 1rem;
+  padding: 1rem;
+  border-left: none;
+  @include default-button;
+  @include scrollable-box;
+
+  .no-results-yet {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .sort-options {
+    position: sticky;
+    top: -1rem;
+    height: 3rem;
+    background-color: $background-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-color;
+
+    button:nth-child(2) {
+      margin: 0;
+    }
+
+    .title {
+      @include large-font;
+    }
+
+    .tiny-title {
+      color: $reddit-color;
+      font-size: 0.7rem;
+      position: absolute;
+      right: 13.5rem;
+      top: 1.5rem;
+    }
+  }
+
+  @media (max-width: 910px) {
+    .sort-options {
+      .title {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 810px) {
+    .sort-options {
+      justify-content: flex-end;
+      width: 103%;
+
+      .tiny-title {
+        visibility: hidden;
+      }
+
+      .title {
+        display: none;
+      }
+    }
+  }
+
+  @include post-grid;
+}
