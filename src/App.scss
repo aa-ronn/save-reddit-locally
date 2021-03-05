@@ -17,6 +17,10 @@
     span {
       color: $reddit-color;
     }
+
+    .title {
+      cursor: pointer;
+    }
   }
 
   .App-content {

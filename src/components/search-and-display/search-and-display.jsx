@@ -1,3 +1,12 @@
+/**
+ * Aaron Perry
+ * SENG3080 - Frontend Programming Assignment
+ * 2021-03-04
+ * search-and-display.jsx
+ * Allows the user to perform searches for hot posts from any user input
+ * subreddit...if it exists.
+ */
+
 import "./search-and-display.scss";
 import axios from "axios";
 import { useState, useRef } from "react";
@@ -9,12 +18,25 @@ import {
   faSave,
 } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * Displays all currently saved Reddit posts found in the local browser storage.
+ * Each post displayed will have a delete and navigate to button as well as
+ * show basic information about the post.
+ * @param notifyAddFavorite callback function to tell App.jsx to update it's
+ * local useState value forcing the re-render of the favorites section.
+ * @returns SearchAndDisplay component
+ */
 export const SearchAndDisplay = ({ notifyAddFavorite }) => {
   const [searchReturnValue, setSearchReturnValue] = useState(null);
   const [subRedditInputValue, setSubRedditInputValue] = useState("");
   const [limitValue, setLimitValue] = useState("?limit=10");
   const inputRef = useRef(null);
 
+  /**
+   * Queries the Reddit API to get the top 10, 50, or 100 top hot posts from
+   * the currently input subreddit name.
+   * @param {*} event form submit event
+   */
   const handleGetNewHotPosts = (event) => {
     event.preventDefault();
     axios
@@ -25,13 +47,19 @@ export const SearchAndDisplay = ({ notifyAddFavorite }) => {
         const data = res.data.data.children;
         setSearchReturnValue(data);
       })
-      .catch((error) => {
+      .catch(() => {
         alert("No subreddit found with that name. Try again.");
         setSubRedditInputValue("");
         inputRef.current.focus();
       });
   };
 
+  /**
+   * Handles the onChange events for all input controlls in the component.
+   * based on the id of the input a different action is taken: update the
+   * search box state or update the selected post query amount.
+   * @param {*} event input change event
+   */
   const handleChange = (event) => {
     const { value, id } = event.target;
 
@@ -53,6 +81,19 @@ export const SearchAndDisplay = ({ notifyAddFavorite }) => {
     }
   };
 
+  /**
+   * Handles the event of the user clicking the save icon button. Adds the selected
+   * post to the local browser storage as a JSON string object, signals App.js
+   * with notifyAddFavorite(), removes the item from the displayed search results,
+   * and sets the new search result list for component re-render.
+   * @param {*} index the index of the post of read the API while mapping
+   * @param {*} name the unique token for the post
+   * @param {*} score the number of upvotes on the post
+   * @param {*} title the title of the post
+   * @param {*} subreddit the subreddit where the post was posted
+   * @param {*} author the author of the post
+   * @param {*} permalink the permalink to the comment section of the post
+   */
   const handleFavoritePost = (
     index,
     name,

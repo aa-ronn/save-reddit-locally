@@ -1,3 +1,12 @@
+/**
+ * Aaron Perry
+ * SENG3080 - Frontend Programming Assignment
+ * 2021-03-04
+ * show-favorites.jsx
+ * Loads all saved Reddit posts from local storage to allow the user to
+ * delete and navigate to.
+ */
+
 import "./show-favorites.scss";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,10 +18,21 @@ import {
   faTrashAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * Displays all currently saved Reddit posts found in the local browser storage.
+ * Each post displayed will have a delete and navigate to button as well as
+ * show basic information about the post.
+ * @param {*} update used to re-render component when prop value changes.
+ * @returns ShowFavorites component
+ */
 export const ShowFavorites = ({ update }) => {
   const [localStorageValues, setLocalStorageValues] = useState(new Array(0));
   const [sortOrder, setSortOrder] = useState("date");
 
+  /**
+   * Gets all the items from the local browser storage, parses the JSON strings
+   * into objects and sets component state.
+   */
   const localStorageToArray = () => {
     var values = [],
       keys = Object.keys(localStorage),
@@ -25,15 +45,31 @@ export const ShowFavorites = ({ update }) => {
     setLocalStorageValues(values);
   };
 
+  /**
+   * On every re-render of component get all locally stored posts. User
+   * dependancy will tell the component to get new data when signal is
+   * received (update prop value changes).
+   */
   useEffect(() => {
     localStorageToArray();
   }, [update]);
 
+  /**
+   * Deletes a specific post from local storage and updates the component
+   * state.
+   * @param {*} name the unique id of the post
+   */
   const handleUnfavoritePost = (name) => {
     localStorage.removeItem(name);
     localStorageToArray();
   };
 
+  /**
+   * Handles the event of the user clicking the sort buttons. Based on the
+   * element's name an action is taken sort by date entered into local storage,
+   * score desc and score asc.
+   * @param {*} event button event
+   */
   const handleSortOrderChange = (event) => {
     const { name } = event.target;
 
