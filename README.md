@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Save Reddit Locally
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React front end with local web storage used for state.
+
+## Check it out here
+
+https://aa-ronn.github.io/save-reddit-locally/
 
 ## Available Scripts
 
@@ -68,3 +72,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
